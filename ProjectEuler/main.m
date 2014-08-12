@@ -11,6 +11,8 @@
 int sumMultiplesOf3or5below1000();
 int sumOfEvenFibonacciNumbersUnderFourMillion();
 long largestPrimeFactor();
+int largestPalindromeFromProductOfThreeDigitNumbers();
+
 int main(int argc, const char* argv[])
 {
     @autoreleasepool
@@ -22,6 +24,17 @@ int main(int argc, const char* argv[])
         NSLog(@"%ld", largestPrimeFactor());
     }
     return 0;
+}
+
+#pragma mark Problem 4
+int largestPalindromeFromProductOfThreeDigitNumbers()
+{
+    //A palindromic number reads the same both ways.The largest palindrome made from the product of two 2 - digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3 - digit numbers.
+    int max = 999 * 999;
+    int min = 100 * 100;
+  
+    
+    return 1;
 }
 #pragma mark Problem 3
 long largestPrimeFactor()
