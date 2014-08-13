@@ -13,6 +13,7 @@ int sumOfEvenFibonacciNumbersUnderFourMillion();
 long largestPrimeFactor();
 long largestPalindromeFromProductOfThreeDigitNumbers();
 int smallestNumberEvenlyDivisibleFromOneToTwenty();
+int sumSquareDifference();
 
 int main(int argc, const char* argv[])
 {
@@ -20,13 +21,35 @@ int main(int argc, const char* argv[])
     {
         // insert code here...
         NSLog(@"Hello, World!");
-        NSLog(@"%d", sumMultiplesOf3or5below1000());
-        NSLog(@"%d", sumOfEvenFibonacciNumbersUnderFourMillion());
-        NSLog(@"%ld", largestPrimeFactor());
-        NSLog(@"%ld", largestPalindromeFromProductOfThreeDigitNumbers());
-        NSLog(@"%d", smallestNumberEvenlyDivisibleFromOneToTwenty());
+        NSLog(@"1: %d", sumMultiplesOf3or5below1000());
+        NSLog(@"2: %d", sumOfEvenFibonacciNumbersUnderFourMillion());
+        NSLog(@"3: %ld", largestPrimeFactor());
+        NSLog(@"4: %ld", largestPalindromeFromProductOfThreeDigitNumbers());
+        NSLog(@"5: %d", smallestNumberEvenlyDivisibleFromOneToTwenty());
+        NSLog(@"6: %d", sumSquareDifference());
     }
     return 0;
+}
+#pragma mark Problem 6
+int sumSquareDifference()
+{
+    //The sum of the squares of the first ten natural numbers is, 12 + 22 + ... + 102 = 385
+
+    //The square of the sum of the first ten natural numbers is, (1 + 2 + ... + 10)2 = 552 = 3025
+
+    //Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+    //Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+    int sumSquares = 0;
+    int sumNatural = 0;
+
+    for (int i = 1; i <= 100; i++) {
+        sumSquares += i * i;
+        sumNatural += i;
+    }
+
+    sumNatural = sumNatural * sumNatural;
+    return abs(sumSquares - sumNatural);
 }
 
 #pragma mark Problem 5
