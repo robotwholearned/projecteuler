@@ -12,6 +12,7 @@ int sumMultiplesOf3or5below1000();
 int sumOfEvenFibonacciNumbersUnderFourMillion();
 long largestPrimeFactor();
 long largestPalindromeFromProductOfThreeDigitNumbers();
+int smallestNumberEvenlyDivisibleFromOneToTwenty();
 
 int main(int argc, const char* argv[])
 {
@@ -23,8 +24,37 @@ int main(int argc, const char* argv[])
         NSLog(@"%d", sumOfEvenFibonacciNumbersUnderFourMillion());
         NSLog(@"%ld", largestPrimeFactor());
         NSLog(@"%ld", largestPalindromeFromProductOfThreeDigitNumbers());
+        NSLog(@"%d", smallestNumberEvenlyDivisibleFromOneToTwenty());
     }
     return 0;
+}
+
+#pragma mark Problem 5
+int smallestNumberEvenlyDivisibleFromOneToTwenty()
+{
+    //    2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 ?
+    //    BOOL isFound = NO;
+    int num = 0;
+
+    // NSArray* numsToCheck = @[ @11, @13, @14, @16, @17, @18, @19, @20 ];
+
+    //    int numDividedEvenly = 0;
+    //
+    //    while (!isFound) {
+    //        NSLog(@"number: %d", num);
+    //        numDividedEvenly = 0;
+    //        for (int i = 1; i <= 20; i++) {
+    //            if (num % i == 0) {
+    //                numDividedEvenly++;
+    //            }
+    //            if (numDividedEvenly == 20) {
+    //                isFound = YES;
+    //            }
+    //        }
+    //        num++;
+    //    }
+
+    return num;
 }
 
 #pragma mark Problem 4
