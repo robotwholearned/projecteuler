@@ -14,6 +14,8 @@ long largestPrimeFactor();
 long largestPalindromeFromProductOfThreeDigitNumbers();
 int smallestNumberEvenlyDivisibleFromOneToTwenty();
 int sumSquareDifference();
+long the10001stPrime();
+BOOL checkIfPrime(int num);
 
 int main(int argc, const char* argv[])
 {
@@ -27,8 +29,41 @@ int main(int argc, const char* argv[])
         NSLog(@"4: %ld", largestPalindromeFromProductOfThreeDigitNumbers());
         NSLog(@"5: %d", smallestNumberEvenlyDivisibleFromOneToTwenty());
         NSLog(@"6: %d", sumSquareDifference());
+        NSLog(@"6: %ld", the10001stPrime());
     }
     return 0;
+}
+#pragma mark Problem 7
+long the10001stPrime()
+{
+    //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+    //What is the 10 001st prime number?
+    //faster to use a prime sieve?
+
+    BOOL isPrimeNumber = 0;
+
+    //have num,
+    //check if prime
+    //yes: incement prime found, add num to array
+    //increment num
+
+    isPrimeNumber = checkIfPrime(23);
+    return isPrimeNumber;
+}
+BOOL checkIfPrime(int num)
+{
+    BOOL isPrime = YES;
+    if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0) {
+        isPrime = NO;
+    } else {
+        for (int i = 2; i < num - 1; i++) {
+            if (num % i == 0) {
+                isPrime = NO;
+                break;
+            }
+        }
+    }
+    return isPrime;
 }
 #pragma mark Problem 6
 int sumSquareDifference()
